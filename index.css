@@ -1,0 +1,54 @@
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.flow-path {
+  stroke-dasharray: 12;
+  animation: flow 15s linear infinite;
+}
+
+@keyframes flow {
+  from {
+    stroke-dashoffset: 240;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.epic-glow {
+  box-shadow: 0 0 80px rgba(56, 189, 248, 0.15);
+}
+
+.embroidery-line {
+  stroke-dasharray: 4;
+  animation: stitch 2s linear infinite;
+}
+
+@keyframes stitch {
+  from { stroke-dashoffset: 20; }
+  to { stroke-dashoffset: 0; }
+}
+
+.confirmation-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 0.2; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
